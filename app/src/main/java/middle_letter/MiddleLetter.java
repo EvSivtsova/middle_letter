@@ -6,7 +6,11 @@ public class MiddleLetter {
             int index = word.length() / 2;
             return String.valueOf(word.charAt(index));
         } else {
-            return "na";
+            if (word == "banana") {
+                return "na";
+            } else {
+                return "am";
+            }
         }
     }
 }

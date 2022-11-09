@@ -44,4 +44,14 @@ public class MiddleLetterTest {
         String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetters, result);
     }
+
+    @Test
+    public void shouldReturnTwoLetters_WhenWordLengthIsEven2() {
+        String word = "lama";
+        String expectedLetters = "am";
+
+        MiddleLetter middleLetter = new MiddleLetter();
+        String result = middleLetter.getLetter(word);
+        assertEquals("Returns one letter if word's length is odd", expectedLetters, result);
+    }
 }

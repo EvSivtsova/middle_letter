@@ -42,7 +42,7 @@ public class MiddleLetterTest {
 
         MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
-        assertEquals("Returns one letter if word's length is odd", expectedLetters, result);
+        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
     }
 
     @Test
@@ -52,6 +52,16 @@ public class MiddleLetterTest {
 
         MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
-        assertEquals("Returns one letter if word's length is odd", expectedLetters, result);
+        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
+    }
+
+    @Test
+    public void shouldReturnTwoLetters_WhenWordLengthIsEven3() {
+        String word = "flower";
+        String expectedLetters = "ow";
+
+        MiddleLetter middleLetter = new MiddleLetter();
+        String result = middleLetter.getLetter(word);
+        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
     }
 }

@@ -8,30 +8,40 @@ public class MiddleLetterTest {
     @Test
     public void shouldReturnOneLetter_WhenWordLengthIsOdd() {
         String word = "testing";
-        char expectedLetter = 't';
+        String expectedLetter = "t";
 
         MiddleLetter middleLetter = new MiddleLetter();
-        char result = middleLetter.getLetter(word);
+        String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
 
     @Test
     public void shouldReturnOneLetter_WhenWordLengthIsOdd2() {
         String word = "cup";
-        char expectedLetter = 'u';
+        String expectedLetter = "u";
 
         MiddleLetter middleLetter = new MiddleLetter();
-        char result = middleLetter.getLetter(word);
+        String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
 
     @Test
     public void shouldReturnOneLetter_WhenWordLengthIsOdd3() {
         String word = "water";
-        char expectedLetter = 't';
+        String expectedLetter = "t";
 
         MiddleLetter middleLetter = new MiddleLetter();
-        char result = middleLetter.getLetter(word);
+        String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
+    }
+
+    @Test
+    public void shouldReturnTwoLetters_WhenWordLengthIsEven() {
+        String word = "banana";
+        String expectedLetters = "na";
+
+        MiddleLetter middleLetter = new MiddleLetter();
+        String result = middleLetter.getLetter(word);
+        assertEquals("Returns one letter if word's length is odd", expectedLetters, result);
     }
 }

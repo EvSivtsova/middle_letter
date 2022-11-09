@@ -1,8 +1,12 @@
 package middle_letter;
 
 public class MiddleLetter {
-    public Character getLetter(String word) {
-        int index = word.length() / 2;
-        return word.charAt(index);
+    public String getLetter(String word) {
+        if (word.length() % 2 != 0) {
+            int index = word.length() / 2;
+            return String.valueOf(word.charAt(index));
+        } else {
+            return "na";
+        }
     }
 }

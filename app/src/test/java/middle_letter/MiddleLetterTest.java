@@ -1,16 +1,22 @@
 package middle_letter;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.Before;
 
 import static org.junit.Assert.*;
 
 public class MiddleLetterTest {
+    MiddleLetter middleLetter;
+    @Before
+    public void initialize() {
+         middleLetter = new MiddleLetter();
+    }
     @Test
     public void shouldReturnOneLetter_WhenWordLengthIsOdd() {
         String word = "testing";
         String expectedLetter = "t";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
@@ -20,7 +26,6 @@ public class MiddleLetterTest {
         String word = "cup";
         String expectedLetter = "u";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
@@ -30,7 +35,6 @@ public class MiddleLetterTest {
         String word = "water";
         String expectedLetter = "t";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
@@ -40,7 +44,6 @@ public class MiddleLetterTest {
         String word = "banana";
         String expectedLetters = "na";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns two letters if word's length is even", expectedLetters, result);
     }
@@ -50,7 +53,6 @@ public class MiddleLetterTest {
         String word = "lama";
         String expectedLetters = "am";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns two letters if word's length is even", expectedLetters, result);
     }
@@ -60,7 +62,6 @@ public class MiddleLetterTest {
         String word = "flower";
         String expectedLetters = "ow";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
         assertEquals("Returns two letters if word's length is even", expectedLetters, result);
     }
@@ -70,9 +71,8 @@ public class MiddleLetterTest {
         String word = "A";
         String expectedLetters = "A";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
-        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
+        assertEquals("Returns one letters if the word is one letter long", expectedLetters, result);
     }
 
     @Test
@@ -80,19 +80,16 @@ public class MiddleLetterTest {
         String word = "a";
         String expectedLetters = "a";
 
-        MiddleLetter middleLetter = new MiddleLetter();
         String result = middleLetter.getLetter(word);
-        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
+        assertEquals("Returns one letter if the word is one letter long", expectedLetters, result);
     }
 
-
     @Test
-    public void shouldReturnTwoLetters_WhenWordIsTwoLetterLong() {
+    public void shouldReturnTwoLetters_WhenWordIsTwoLettersLong() {
         String word = "an";
         String expectedLetters = "an";
-
-        MiddleLetter middleLetter = new MiddleLetter();
+        
         String result = middleLetter.getLetter(word);
-        assertEquals("Returns two letters if word's length is even", expectedLetters, result);
+        assertEquals("Returns two letters if the word is two letters lonq", expectedLetters, result);
     }
 }

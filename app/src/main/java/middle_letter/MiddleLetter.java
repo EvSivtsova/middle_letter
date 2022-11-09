@@ -2,11 +2,7 @@ package middle_letter;
 
 public class MiddleLetter {
     public Character getLetter(String word) {
-        if (word == "testing") {
-            return 't';
-        } else {
-            return 'u';
-        }
-
+        int index = word.length() / 2;
+        return word.charAt(index);
     }
 }

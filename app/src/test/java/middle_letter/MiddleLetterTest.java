@@ -24,4 +24,14 @@ public class MiddleLetterTest {
         char result = middleLetter.getLetter(word);
         assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
     }
+
+    @Test
+    public void shouldReturnOneLetter_WhenWordLengthIsOdd3() {
+        String word = "water";
+        char expectedLetter = 't';
+
+        MiddleLetter middleLetter = new MiddleLetter();
+        char result = middleLetter.getLetter(word);
+        assertEquals("Returns one letter if word's length is odd", expectedLetter, result);
+    }
 }

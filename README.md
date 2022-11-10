@@ -16,3 +16,6 @@ get_middle("middle") # => "dd"
 get_middle("A") # => "A"
 get_middle("of") # => "of"
 ```
+## Program output
+
+<img src="https://github.com/EvSivtsova/middle_letter/blob/main/middle_letter_output.png" width=500/>

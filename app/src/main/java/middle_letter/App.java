@@ -4,11 +4,30 @@
 package middle_letter;
 
 public class App {
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        MiddleLetter middleLetter = new MiddleLetter();
+        System.out.println(ANSI_BLUE + "The program returns the middle letter of a word." + ANSI_RESET);
+        String word1 = "test";
+        String middle1 = middleLetter.getLetter(word1);
+        System.out.printf("If the word is '%s', the middle letter is '%s'. \n", word1, middle1);
+        String word2 = "testing";
+        String middle2 = middleLetter.getLetter(word2);
+        System.out.printf("If the word is '%s', the middle letter is '%s'. \n", word2, middle2);
+        String word3 = "middle";
+        String middle3 = middleLetter.getLetter(word3);
+        System.out.printf("If the word is '%s', the middle letter is '%s'. \n", word3, middle3);
+        String word4 = "A";
+        String middle4 = middleLetter.getLetter(word4);
+        System.out.printf("If the word is '%s', the middle letter is '%s'. \n", word4, middle4);
+        String word5 = "of";
+        String middle5 = middleLetter.getLetter(word5);
+        System.out.printf("If the word is '%s', the middle letter is '%s'. \n", word5, middle5);
     }
 }

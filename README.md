@@ -18,4 +18,8 @@ get_middle("of") # => "of"
 ```
 ## Program output
 
-<img src="https://github.com/EvSivtsova/middle_letter/blob/main/middle_letter_output.png" width=500/>
+<img src="https://github.com/EvSivtsova/middle_letter/blob/main/outputs/middle_letter_joyful_output.png" width=500/>
+
+## Test coverage
+
+<img src="https://github.com/EvSivtsova/middle_letter/blob/main/outputs/middle_letter_test_coverage.png">

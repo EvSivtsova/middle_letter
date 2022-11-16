@@ -9,10 +9,6 @@ public class App {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RESET = "\u001B[0m";
 
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
         MiddleLetter middleLetter = new MiddleLetter();
         System.out.println(ANSI_BLUE + "The program returns the middle letter of a word." + ANSI_RESET);

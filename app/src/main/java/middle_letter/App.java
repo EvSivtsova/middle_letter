@@ -30,10 +30,10 @@ public class App {
         System.out.printf("If the word is '%s', the middle is '%s'. \n", word4, middle4);
         String word5 = "of";
         String middle5 = middleLetter.getLetter(word5);
-        System.out.printf("If the word is '%s', the middle is '%s'. \n", word5, middle5);
+        System.out.printf("If the word is '%s', the middle is '%s'. \n\n", word5, middle5);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println(ANSI_BLUE + "Please enter a year you would like to check" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Please enter a word you would like to check" + ANSI_RESET);
         String wordToCheck = scanner.nextLine();
         String wordsMiddle = middleLetter.getLetter(wordToCheck);
         System.out.printf("You entered '%s', the middle of this word is '%s'. \n", wordToCheck, wordsMiddle);
